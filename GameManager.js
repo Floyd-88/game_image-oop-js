@@ -46,7 +46,7 @@ class GameManager {
             }
         }
     }
-    
+
     counter() {
         this.countNumber++;
         this.scoreElement.innerHTML = this.countNumber;

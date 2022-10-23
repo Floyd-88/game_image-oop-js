@@ -17,7 +17,7 @@ imagePath() {
 }
 
 coverPath() {
-  return "img/black.jpg"
+  return "img/shirt.jpg"
 }
 
 get element() {
