@@ -1,13 +1,17 @@
 let div = document.querySelector("#images")
-let start_game = document.querySelector("#start_game")
 let count_try = document.querySelector("#count_try")
+let start_game = document.querySelector("#start_game")
 
-let cardsGame = new Deck()
-cardsGame.array_shuffle();
-cardsGame.show_card(div);
 
-document.addEventListener("click", function (e){
-    if(e.target.className === 'buttonClass') {
+let game = new GameManager(div, count_try)
+game.startGame()
 
+div.addEventListener("click", function (e){
+    let clickCard = e.target.connectedCard
+    if(clickCard) {
+        game.selectCard(clickCard)
     }
+})
+start_game.addEventListener("click", function () {
+    game.startGame()
 })

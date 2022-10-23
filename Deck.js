@@ -16,11 +16,12 @@ class Deck {
     }
 
     removeCard(card) {
+        // this.array_cards_random.map(i => console.log(i.imagePath()))
+        // console.log(card.imagePath())
         let index = this.array_cards_random.findIndex(i => i.imagePath() == card.imagePath())
         if(index != -1) {
             this.array_cards_random.splice(index, 1);
             card.disconnectCardDOM()
         }
     }
-
 }

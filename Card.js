@@ -1,7 +1,7 @@
 class Card {
 image;
 element;
-shirt_card = true;
+shirt_card = false;
 
 constructor(image) {
   this.image = image;
